@@ -1,0 +1,43 @@
+//A very simple function that takes one parameter which is tested against a Regular Expression
+//Change the paramenter and watch how the function returns either a value of "true" or "false", according
+//to the existence or non-existence of the character or set of characters defined by the RegExp in the target
+//object
+
+var G = {
+    NewText: {
+        text: "There is no such thing as a miser who will spend a lot of money on a car. 
+        Always be aware of the miser, for he is stingy, 
+        thrifty and exercises a great amount of providence."
+    },
+    
+    Horse: {
+        name: "Rehsus",
+        age: 31,
+        place_of_birth: "France",
+        hooves: {
+            front: 2,
+            back: 2,
+        },
+        color: "Grey",
+    },
+    
+    Dog: {
+        name: "Rex",
+        age: 12,
+        place_of_birth: "South Africa",
+        limbs: {
+            paws: 4,
+            ears: 2,
+            snout: 1,
+        },
+        color: "Brown",
+    },
+    
+    explore: function(x) {
+        return (/Z/ig).test(x);
+    },
+};
+console.log(G.explore(G.NewText.text));//passes the silly text about misers and checks for the existence of the 
+                                      //character "Z" (/Z/ig)
+                                      //this particular seach returns a result of false.
+                                      //Go ahead and change the value of the argument to other objects
