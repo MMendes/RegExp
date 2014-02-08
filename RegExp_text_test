@@ -3,7 +3,9 @@
 //to the existence or non-existence of the character or set of characters defined by the RegExp in the target
 //object
 
+//create a single global object. Always a good idea ;)
 var G = {
+    //nested objects "NexText", "Horse" and "Dog" in "G"
     NewText: {
         text: "There is no such thing as a miser who will spend a lot of money on a car. 
         Always be aware of the miser, for he is stingy, 
@@ -32,7 +34,8 @@ var G = {
         },
         color: "Brown",
     },
-    
+    //create a function that takes a single paramenter "x" and tests the RegExp (/Z/ig) against it, returning 
+    //the either "true" or "false" according to the existence or lack-of character "Z" in the target object
     explore: function(x) {
         return (/Z/ig).test(x);
     },
